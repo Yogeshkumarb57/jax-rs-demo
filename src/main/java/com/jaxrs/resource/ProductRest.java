@@ -45,8 +45,7 @@ public class ProductRest {
     @Produces({MediaType.APPLICATION_JSON,
             MediaType.APPLICATION_XML})
     @ApiOperation(value = "Add product service", notes = "Adds product from product detail.")
-    public Response addProduct() {
-        Product product = new Product();
+    public Response addProduct(Product product) {
         return ResponseUtility.getInstance().generateResponse(Response.Status.OK, null,
                 productService.saveProduct(product));
     }
