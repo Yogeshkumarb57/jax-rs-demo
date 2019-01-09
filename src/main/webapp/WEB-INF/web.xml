@@ -35,7 +35,7 @@
         </init-param>
         <init-param>
             <param-name>swagger.api.basepath</param-name>
-            <param-value>http://localhost:7000/rest</param-value>
+            <param-value>http://localhost:9000/rest</param-value>
         </init-param>
         <init-param>
             <param-name>swagger.filter</param-name>
