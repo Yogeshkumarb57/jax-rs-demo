@@ -1,7 +1,7 @@
-package com.demo.jaxrs.resource;
+package com.jaxrs.resource;
 
-import com.demo.jaxrs.model.Article;
-import com.demo.jaxrs.utility.SiteDataReadUtility;
+import com.jaxrs.model.Article;
+import com.jaxrs.utility.TheHinduSiteDataReadUtility;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
@@ -14,20 +14,20 @@ public class NewspaperArticleRest {
     @Path("/authors")
     @Produces(MediaType.APPLICATION_JSON)
     public List<String> getAuthors() {
-        return SiteDataReadUtility.getAllAuthors();
+        return TheHinduSiteDataReadUtility.getAllAuthors();
     }
 
     @GET
     @Path("/authors/{authorName}")
     @Produces(MediaType.APPLICATION_JSON)
     public List<Article> getArticlesByAuthor(@PathParam("authorName") String authorName) {
-        return SiteDataReadUtility.getAllArticlesByAuthor(authorName);
+        return TheHinduSiteDataReadUtility.getAllArticlesByAuthor(authorName);
     }
 
     @GET
     @Path("/search")
     @Produces(MediaType.APPLICATION_JSON)
     public List<Article> searchNewspaperArticleData(@QueryParam("title") String title, @QueryParam("description") String description) {
-        return SiteDataReadUtility.getAllArticlesByTitleDesc(title, description);
+        return TheHinduSiteDataReadUtility.getAllArticlesByTitleDesc(title, description);
     }
 }

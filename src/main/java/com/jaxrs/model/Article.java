@@ -1,12 +1,12 @@
-package com.demo.jaxrs.model;
+package com.jaxrs.model;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
 public class Article {
-    private String authorName = "";
-    private String title = "";
-    private String description = "";
+    private String authorName;
+    private String title;
+    private String description;
 
     public Article(String authorName, String title, String description) {
         this.authorName = authorName;

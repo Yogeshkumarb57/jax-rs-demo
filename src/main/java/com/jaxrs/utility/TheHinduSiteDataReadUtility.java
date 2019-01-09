@@ -1,6 +1,6 @@
-package com.demo.jaxrs.utility;
+package com.jaxrs.utility;
 
-import com.demo.jaxrs.model.Article;
+import com.jaxrs.model.Article;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class SiteDataReadUtility {
+public class TheHinduSiteDataReadUtility {
     private static List<String> authors = null;
     private static List<Article> allArticles = null;
 
